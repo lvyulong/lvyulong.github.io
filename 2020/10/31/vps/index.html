@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"lvyulong.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="购买VPSVPS（Virtual private server，虚拟专用服务器）。 Vultr是美国的一个VPS服务商，全球有15个数据中心，可以一键部署服务器。采用小时计费策略，可以在任何时间新建或者摧毁VPS。 链接：www.vultr.com。 一键搭建shaodowsocks1.下载一键搭建ss脚本文件（直接复制这段代码运行即可） 1git clone -b master https:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vps">
+<meta property="og:url" content="https://lvyulong.github.io/2020/10/31/vps/index.html">
+<meta property="og:site_name" content="Eallon">
+<meta property="og:description" content="购买VPSVPS（Virtual private server，虚拟专用服务器）。 Vultr是美国的一个VPS服务商，全球有15个数据中心，可以一键部署服务器。采用小时计费策略，可以在任何时间新建或者摧毁VPS。 链接：www.vultr.com。 一键搭建shaodowsocks1.下载一键搭建ss脚本文件（直接复制这段代码运行即可） 1git clone -b master https:">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://lvyulong.github.io/2020/10/31/vps/b4bd4c8c40540c970e5571bc4d7f8bf4.png!w1920!h1080!t.png">
+<meta property="og:image" content="https://lvyulong.github.io/2020/10/31/vps/2e7d14c10bc88e8deac665c86d576ba6.png!w1920!h1080!t.png">
+<meta property="og:image" content="https://lvyulong.github.io/2020/10/31/vps/c762a98dadeed9905d405a279e471b2a.png!w1920!h1080!t.png">
+<meta property="og:image" content="https://lvyulong.github.io/2020/10/31/vps/7473e0bc142d3edd9758ca76d0d6ed0c.png!w1920!h1080!t.png">
+<meta property="article:published_time" content="2020-10-31T07:37:48.000Z">
+<meta property="article:modified_time" content="2020-12-08T00:10:13.725Z">
+<meta property="article:author" content="Eallon">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lvyulong.github.io/2020/10/31/vps/b4bd4c8c40540c970e5571bc4d7f8bf4.png!w1920!h1080!t.png">
+
+<link rel="canonical" href="https://lvyulong.github.io/2020/10/31/vps/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>vps | Eallon</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Eallon</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://lvyulong.github.io/2020/10/31/vps/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Eallon">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eallon">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vps
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-10-31 15:37:48" itemprop="dateCreated datePublished" datetime="2020-10-31T15:37:48+08:00">2020-10-31</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-08 08:10:13" itemprop="dateModified" datetime="2020-12-08T08:10:13+08:00">2020-12-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BA%92%E8%81%94%E7%BD%91%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">互联网技术</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        
+
+<h3 id="购买VPS"><a href="#购买VPS" class="headerlink" title="购买VPS"></a>购买VPS</h3><p>VPS（Virtual private server，虚拟专用服务器）。</p>
+<p><strong>Vultr</strong>是美国的一个VPS服务商，全球有15个数据中心，可以一键部署服务器。采用<strong>小时计费策略</strong>，可以在任何时间新建或者摧毁VPS。</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://tiaozhuan.win/vultr?utm_source=textarea.com&utm_medium=textarea.com&utm_campaign=article">www.vultr.com</a>。</p>
+<h3 id="一键搭建shaodowsocks"><a href="#一键搭建shaodowsocks" class="headerlink" title="一键搭建shaodowsocks"></a>一键搭建shaodowsocks</h3><p>1.下载一键搭建ss脚本文件（直接复制这段代码运行即可）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone -b master https:&#x2F;&#x2F;github.com&#x2F;Flyzy2005&#x2F;ss-fly</span><br></pre></td></tr></table></figure>
+
+<p>2.运行搭建ss脚本代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ss-fly&#x2F;ss-fly.sh -i password 1024</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启BBR加速"><a href="#开启BBR加速" class="headerlink" title="开启BBR加速"></a>开启BBR加速</h3><p>BBR是Google开源的一套内核加速算法，可以让你搭建的shadowsocks速度上一个台阶。</p>
+<p> 开启BBR加速</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ss-fly&#x2F;ss-fly.sh -bbr</span><br></pre></td></tr></table></figure>
+
+<h3 id="本机配置shadowsocks"><a href="#本机配置shadowsocks" class="headerlink" title="本机配置shadowsocks"></a>本机配置shadowsocks</h3><h4 id="WIndows客户端配置"><a href="#WIndows客户端配置" class="headerlink" title="WIndows客户端配置"></a>WIndows客户端配置</h4><p>双击运行shadowsocks.exe，之后会在任务栏有一个小飞机图标，右击小飞机图标，选择<strong>服务器</strong>-&gt;<strong>编辑服务器</strong>：</p>
+<p><img src="/2020/10/31/vps/b4bd4c8c40540c970e5571bc4d7f8bf4.png!w1920!h1080!t.png" alt="img"></p>
+<p>在shadowsocks的windows客户端中，<strong>服务器IP</strong>指你购买的VPS的IP，<strong>服务器端口</strong>指你服务器的配置文件中的端口，<strong>密码</strong>指你服务器的配置文件中的密码，<strong>加密</strong>指你服务器的配置文件中的加密方式，<strong>代理端口</strong>默认为1080不需要改动。<strong>其他都可以默认</strong>。设置好后，点击添加按钮即可。</p>
+<h4 id="Mac-OS客户端配置"><a href="#Mac-OS客户端配置" class="headerlink" title="Mac OS客户端配置"></a>Mac OS客户端配置</h4><p>双击运行shadowsocksX-NG.app，之后会在任务栏有一个小飞机图标，右击小飞机图标，选择<strong>服务器</strong>-&gt;<strong>服务器设置</strong>：</p>
+<p><img src="/2020/10/31/vps/2e7d14c10bc88e8deac665c86d576ba6.png!w1920!h1080!t.png" alt="img"></p>
+<p>在shadowsocks的Mac OS客户端中，<strong>地址</strong>指你购买的VPS的IP，冒号后面跟上配置文件中的<strong>端口</strong>，<strong>密码</strong>指你服务器的配置文件中的密码，<strong>加密</strong>指你服务器的配置文件中的加密方式。<strong>其他都可以默认</strong>。设置好后，点击确认即可。</p>
+<h4 id="安卓客户端配置"><a href="#安卓客户端配置" class="headerlink" title="安卓客户端配置"></a>安卓客户端配置</h4><p>下载apk安装好后，打开影梭客户端，点击主界面左上角的<strong>编辑按钮</strong>（铅笔形状）：</p>
+<p><img src="/2020/10/31/vps/c762a98dadeed9905d405a279e471b2a.png!w1920!h1080!t.png" alt="img"></p>
+<p>在shadowsocks安卓客户端的配置中填入相应配置信息，其中，<strong>功能设置</strong>中，<strong>路由</strong>改成如上图所示，其他都可以默认。</p>
+<h4 id="苹果客户端配置"><a href="#苹果客户端配置" class="headerlink" title="苹果客户端配置"></a>苹果客户端配置</h4><p>shadowsocks苹果客户端经常会被App Store下架，可以在App Store搜索关键字<strong>shadowsock</strong>或者<strong>wingy</strong>，找到一个软件截图中包括填写ip，加密方式，密码的软件一般就是对的了（目前可以用的是FirstWingy）。当然，你也可以下载PP助手，之后在PP助手上下载Wingy（Wingy支持ssr）或者shadowrocket（shadowrocket支持ssr）。</p>
+<p><img src="/2020/10/31/vps/7473e0bc142d3edd9758ca76d0d6ed0c.png!w1920!h1080!t.png" alt="img"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%BB%9C/" rel="tag"># 网络</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/10/31/jsTools/" rel="prev" title="JS库">
+      <i class="fa fa-chevron-left"></i> JS库
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/10/31/cmd/" rel="next" title="cmd终端命令">
+      cmd终端命令 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B4%AD%E4%B9%B0VPS"><span class="nav-number">1.</span> <span class="nav-text">购买VPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E9%94%AE%E6%90%AD%E5%BB%BAshaodowsocks"><span class="nav-number">2.</span> <span class="nav-text">一键搭建shaodowsocks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%80%E5%90%AFBBR%E5%8A%A0%E9%80%9F"><span class="nav-number">3.</span> <span class="nav-text">开启BBR加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%AC%E6%9C%BA%E9%85%8D%E7%BD%AEshadowsocks"><span class="nav-number">4.</span> <span class="nav-text">本机配置shadowsocks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#WIndows%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">4.1.</span> <span class="nav-text">WIndows客户端配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mac-OS%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">4.2.</span> <span class="nav-text">Mac OS客户端配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E5%8D%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">4.3.</span> <span class="nav-text">安卓客户端配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%8B%B9%E6%9E%9C%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%85%8D%E7%BD%AE"><span class="nav-number">4.4.</span> <span class="nav-text">苹果客户端配置</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Eallon</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Eallon</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
